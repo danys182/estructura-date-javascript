@@ -31,9 +31,7 @@ class MySinglyLinkedList {
   }
 
   insert(index, value) {
-    this.checkIndex(index);
-
-    if ((index) => this.length) {
+    if (index >= this.length) {
       return this.append(value);
     }
 
@@ -47,10 +45,35 @@ class MySinglyLinkedList {
     return this;
   }
 
+  remove(index) {
+    if (!this.checkIndex(index)) {
+      return null;
+    }
+
+    const firstPointer = this.getIndex(index - 1);
+    const secondPointer = this.getIndex(index + 1);
+    firstPointer.next = secondPointer;
+    this.length--;
+    return this;
+  }
+
   checkIndex(index) {
     if (index > this.length) {
-      console.error(`Indice ${inidice} en lista con ${this.length} elementos`);
+      console.error(`Indice ${index} en lista con ${this.length} elementos`);
+      return false;
     }
+    return true;
+  }
+
+  search(value) {
+    let currentNode = this.head;
+    while (currentNode.next !== null) {
+      if (currentNode.value === value) {
+        return currentNode;
+      }
+      currentNode = currentNode.next;
+    }
+    return null;
   }
 
   getIndex(index) {
@@ -64,24 +87,17 @@ class MySinglyLinkedList {
 
     return currentNode;
   }
-
-  remove(index) {
-    const firstPointer = this.getIndex(index - 1);
-    const secondPointer = this.getIndex(index + 1);
-    firstPointer.next = secondPointer;
-    this.length--;
-    return this;
-  }
 }
 
 let list = new MySinglyLinkedList(1);
 list.append(2);
 list.append(3);
-list.append(4);
+list.append(5);
 list.append(6);
-list.append(7);
-list.prepend(0);
-list.insert(5, 5);
-list.remove(4);
+list.insert(4, 4);
+list.prepend(7);
+list.remove(5);
 
 console.log(list);
+
+console.log("Nodo con valor 4 ", list.search(4));
