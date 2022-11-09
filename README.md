@@ -40,6 +40,21 @@ Basicamente es una pila donde los elementos se van apilando, siendo que el eleme
 
 ![https://i.ibb.co/xgN07ZG/stack.jpg](https://i.ibb.co/xgN07ZG/stack.jpg)
 
+## Algunos métodos para manipular
+
 - **Pop**: Remover el último elemento
 - **Push**: Agregar un elemento al final
 - **Peek**: Tomar el último elemento de la línea
+
+
+# ****Queues****
+
+En esta estructura insertamos elementos al final, el primero en ser insertado es primero que va a ser retirado, de ahí el nombre FIFO (First In – First Out), “Primero en entrar primero en salir”.
+
+![https://i.ibb.co/mNSbKnB/queue.jpg](https://i.ibb.co/mNSbKnB/queue.jpg)
+
+**Métodos para manipular**
+
+- **Enqueue**: agrega elementos al final de la fila
+- **Dequeue:** remueve el primer elemento de la fila
+- **Peek:** toma el primer elemento de la fila
