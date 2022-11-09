@@ -31,3 +31,15 @@ La navegación siempre es hacia adelante
 | Lookup / Search | Buscar un nodo |
 | Insert | Insertar un nodo en la lista |
 | Delete | Borrar un nodo |
+
+
+
+# Stack
+
+Basicamente es una pila donde los elementos se van apilando, siendo que el elemento que entra va quedando abajo y el último siempre queda arriba, por lo que es el primero que debe salir. De ahí proviene el nombre **LIFO**, Las In (El último que entra), First Out (Es el primero que sale).Algunos métodos para apilar son:
+
+![https://i.ibb.co/xgN07ZG/stack.jpg](https://i.ibb.co/xgN07ZG/stack.jpg)
+
+- **Pop**: Remover el último elemento
+- **Push**: Agregar un elemento al final
+- **Peek**: Tomar el último elemento de la línea
